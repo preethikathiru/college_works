@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <iframe id="youtubeFrame" width="3820" height="1745"></iframe>
+    <div>
+        <br>
+        <br>
+        <h1>Click the button to play next video.</h1>
+        <button style="height:300px;width:300px" onclick="nextVideo()">Next</button>
+        <h1>Click the back button to  play revious video.</h1>
+
+        <button style="height:300px;width:300px" onclick="BackVideo()">Back</button>
+        <button onclick="playVid()" type="button" >Play Video</button>
+        <button onclick="pauseVid()" type="button">Pause Video</button>
+    </div>
+  
+    <script>
+        index = -1;
+        var videoIds = ["1dttq5p0xUM", "ZzVqyWtgUL8", "BXA8kPLDia8"];
+        var  iframeElement = document.getElementById("youtubeFrame") 
+
+        function nextVideo() {
+            index++
+            if (index > videoIds.length-1) {
+                index = 0;
+            }
+            var videoLink = "https://www.youtube.com/embed/" + videoIds[index]+"?autoplay=1";
+            iframeElement.src = videoLink;
+        }   
+        nextVideo();
+
+        function BackVideo(){
+            index--;
+            // alert("Index : "+index)
+             //var videoIds = ["1dttq5p0xUM", "ZzVqyWtgUL8", "BXA8kPLDia8"];
+
+            if (index < 0 ) {
+                index=2;
+            }
+                
+            var videoLink = "https://www.youtube.com/embed/" + videoIds[index];
+            
+            iframeElement.src = videoLink;
+
+        
+        }
+
+        function playVid() { 
+            vats  = iframeElement.src 
+            playLink = vats+"?autoplay=1";
+            iframeElement.src = playLink;
+        } 
+
+    </script>
+</body>
+
+</html>
+
+<!-- https://codepen.io/anon/pen/GBjqQr -->

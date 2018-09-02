@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <video id = "videoPlayerFrame" width="360" height="240" controls>Viideo Player</video>
+    <button onclick="Back()" > Back </button>
+    <button onclick="next()" > Next </button>
+    <button onclick="play()" type="button" > play </button>
+    <button onclick="pause()" type="button" > pause </button>
+    <button onclick="back2()" type="button"> back^2</button>
+    <button onclick="next2()" type="button"> next^2</button>
+</body>
+<script>
+    var  videoElement = document.getElementById("videoPlayerFrame");
+    var videoUrls = [
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", 
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4", 
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" ,
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" ,
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
+    ];
+    var index = -1;
+    function next() {
+        index++
+        if (index > videoUrls.length-1) {
+            index = 0;
+        }
+        var videoLink =  videoUrls[index]
+        videoElement.src = videoLink;
+    }
+    function next2(){
+        index = index+2;
+        if(index> videoUrls.length-1){
+            index=0;
+        }
+        var videoLink =  videoUrls[index]
+        videoElement.src = videoLink;
+    }
+    function Back(){
+        index--;
+        if (index < 0 ) {
+            index=videoUrls.length-1;
+        }
+        var videoLink =  videoUrls[index]
+        videoElement.src = videoLink;
+    }
+    function back2(){
+        index = index-2;
+        if(index < 0){
+            index=videoUrls.length-1;
+        }
+        var videoLink =  videoUrls[index]
+        videoElement.src = videoLink;
+    }
+    function play() { 
+        videoElement.play();
+    } 
+    function pause() { 
+        videoElement.pause();
+    } 
+    next();
+</script>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+   
+    <div>
+         <video id="videoPlayerFrame" width="320" height="240" controls src="movie.ogg"  />
+        <br>
+        <br>
+        <h1>Click the button to play next video.</h1>
+        <button style="height:300px;width:300px" onclick="nextVideo()">Next</button>
+    </div>
+  
+
+</body>
+
+</html> -->
+
+<!-- https://codepen.io/anon/pen/GBjqQr -->
