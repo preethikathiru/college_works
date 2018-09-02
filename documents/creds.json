@@ -1,5 +1,28 @@
 
 
-Gitub Steps:
-1. git init // creates a .git folder
- ds
+Gitub Steps/commands:
+1. 	git init // creates a .git folder  //Below are one time setup
+	git remote add origin https://github.com/preethikathiru/college_works.git // links remote to local folder
+	git remote -v // shoes linked remote urls
+	git config --global user.email preethikathiru05@gmail.com // adds user details to local git
+
+2.	git status // list  the added files and unadded, untracked files, (oly files)
+3. 	git diff // shows the difference in the code with exact changes in line (including line number)
+4. 	git add  //adds the file / folder
+	git add folder
+	git add folder/subfolder/filename.html
+	git add . // to add all files
+5. 	git commit -m "message for remembrance for later identification"// saves the curret changes in the local repository(.git)
+6. 	git pull origin master // pull code changes in remote github to local laptop
+6. 	git push origin master // push local laptop codechanges to remote github // asks for username
+7. 	
+
+
+Linux commands:
+1	ls 
+	cd 
+2	history
+	history | grep git // filters history by string
+
+3	sudo apt-get install nginx // to install softwares
+	(nginx is a webserver to serve html files)
