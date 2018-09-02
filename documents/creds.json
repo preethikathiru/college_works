@@ -1,6 +1,6 @@
 
 
-Gitub Steps/commands:
+Gitub Steps/commands:============================
 1. 	git init // creates a .git folder  //Below are one time setup
 	git remote add origin https://github.com/preethikathiru/college_works.git // links remote to local folder
 	git remote -v // shoes linked remote urls
@@ -18,7 +18,12 @@ Gitub Steps/commands:
 7. 	
 
 
-Linux commands:
+enable ssh in github:
+https://wiki.paparazziuav.org/wiki/Github_manual_for_Ubuntu
+ssh-keygen -t rsa -C "your_email@youremail.com" 
+gedit id_rsa.pub 
+
+Linux commands:==================================
 1	ls 
 	cd 
 2	history
@@ -26,3 +31,22 @@ Linux commands:
 
 3	sudo apt-get install nginx // to install softwares
 	(nginx is a webserver to serve html files)
+
+Linux concepts :=================================
+
+	~ ===> root of the current user ==> /home/arun or /home/preethi
+	/ =>>> root of the whole laptop or ubuntu 
+
+nginx file path : 
+read about nginx
+sudo service nginx restart
+sudo service nginx status
+/etc/nginx/sites-enabled/default
+/etc/share/
+
+Next week : 
+Mongodb
+Docker
+postgressql
+pgadmin
+
